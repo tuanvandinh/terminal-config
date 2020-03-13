@@ -1,0 +1,31 @@
+snippet rcc "react class" b
+import React, { Component } from "react";
+
+export default class $1 extends Component {
+  render() {
+    return (
+      <div>
+
+      </div>
+    )
+  }
+}
+endsnippet
+
+snippet todo "this is a TODO reminder" b
+/* TODO: `echo $USER` ${1:what} `!v strftime("%c")` */
+endsnippet
+
+snippet t "insert tags" b
+<$1> </$1>
+endsnippet
+
+snippet st "styles"
+style={styles.$1}
+endsnippet
+
+snippet rnst "stylesheets"
+const styles = StyleSheet.create({
+  $1
+})
+endsnippet

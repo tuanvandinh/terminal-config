@@ -1,0 +1,23 @@
+alias rel="adb shell input keyboard text 'RR' "
+alias devoptions='adb shell input keyevent 82' 
+alias avd='cd ~/Android/Sdk/tools/ && emulator @testAVD'
+alias t='adb shell input keyboard text'
+#alias closeapp='adb shell input keyevent KEYCODE_APP_SWITCH && adb shell input keyevent 20 && adb shell input keyevent DEL' 
+alias back='adb shell input keyevent 4'
+
+
+alias tmux='TERM=screen-256color tmux -2'
+
+######### Functions #############################################
+mktouch() {
+    if [ $# -lt 1 ]; then
+        echo "Missing argument";
+        return 1;
+    fi
+
+    for f in "$@"; do
+        mkdir -p -- "$(dirname -- "$f")"
+        touch -- "$f"
+    done
+}
+
