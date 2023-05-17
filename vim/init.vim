@@ -10,9 +10,9 @@ Plugin 'VundleVim/Vundle.vim'
 call vundle#end()
 filetype plugin indent on
 
-Plugin 'scrooloose/nerdTree'
-"autocmd vimenter * NERDTree
-nmap <C-E> :NERDTreeToggle<CR>
+"Plugin 'scrooloose/nerdTree'
+""autocmd vimenter * NERDTree
+"nmap <C-E> :NERDTreeToggle<CR>
 
 "" using default netrw :Lexplore instead of nerdTree
 "" Toggle Lexplore with F6
@@ -21,6 +21,8 @@ nmap <C-E> :NERDTreeToggle<CR>
 "let g:netrw_browse_split = 4
 "let g:netrw_altv = 1
 "let g:netrw_winsize = 10
+let g:netrw_liststyle = 3
+
 
 " theme color and background
 Plugin 'flazz/vim-colorschemes'
@@ -69,6 +71,9 @@ inoremap jk <ESC>
 set incsearch
 
 Plugin 'jiangmiao/auto-pairs'
+g:AutoPairs
+"Plugin 'windwp/nvim-ts-autotag'
+
 Plugin 'tpope/vim-surround'
 
 
@@ -239,6 +244,8 @@ set nofoldenable
 " ============================================================================
 " Javascript IDE Setup
 " ============================================================================
+Plugin 'leafgarland/typescript-vim'
+
 
 Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
 let g:prettier#autoformat = 0
